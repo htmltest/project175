@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>НЦМУ</title>
+
+        <link rel="stylesheet" href="css/styles.css" />
+
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width" />
+    </head>
+
+    <body>
+
+        <div class="wrapper">
+            <div class="wrapper-inner">
+
+                <div class="top">
+                    <div class="container">
+                        <div class="top-menu">
+                            <ul>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Вопрос-ответ</a></li>
+                                <li><a href="#">Вакансии</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+                        <div class="top-lang">
+                            Ру | <a href="#">En</a>
+                        </div>
+                    </div>
+                </div>
+
+                <header>
+                    <div class="container">
+                        <div class="logo"><img src="images/logo.png" alt="" /></div>
+
+                        <div class="header-cabinet">
+                            <a href="#" class="header-cabinet-link"><svg><use xlink:href="images/sprite.svg#header-cabinet"></use></svg>Личный кабинет</a>
+                        </div>
+
+                        <div class="header-search">
+                            <a href="#" class="header-search-link"><svg><use xlink:href="images/sprite.svg#header-search"></use></svg></a>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="nav">
+                    <div class="container">
+                        <ul>
+                            <li><a href="#">Об НЦМУ</a></li>
+                            <li class="active"><a href="#">Центры</a></li>
+                            <li><a href="#">Результаты деятельности</a></li>
+                            <li><a href="#">Советы</a></li>
+                            <li><a href="#">Вопрос-ответ</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- container -->
+                <div class="container">
+
+                    <!-- main map -->
+                    <div class="main-map">
+                        <div class="main-header">
+                            <div class="main-header-title">Карта центров</div>
+                        </div>
+
+                        <div class="main-map-container">
+                            <div class="main-map-content"></div>
+                            <script src="js/regions.js"></script>
+                            <script>
+                                var mainRegionsData = [
+                                    [1, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [2, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [3, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [4, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [5, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [6, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [7, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [8, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [9, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [10, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [11, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [12, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [13, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [14, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [15, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [16, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [17, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [18, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [19, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [20, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [21, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [22, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [23, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [24, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [25, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [26, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [27, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [28, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [29, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [30, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [31, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [32, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [33, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [34, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [35, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [36, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [37, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [38, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [39, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [40, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [41, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [42, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [43, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [44, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [45, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [46, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [47, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [48, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [49, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [50, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [51, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [52, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [53, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [54, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [55, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [56, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [57, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [58, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [59, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [60, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [61, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [62, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [63, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [64, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [65, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [66, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [67, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [68, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [69, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [70, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [71, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [72, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [73, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [74, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [75, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [76, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [77, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [78, {
+                                        'math'  : '11',
+                                        'ntr'   : '4',
+                                        'genom' : '6',
+                                        'link'  : 'windows/main-map.html'
+                                    }],
+                                    [79, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [83, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [86, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [87, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [89, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [91, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }],
+                                    [92, {
+                                        'math'  : '0',
+                                        'ntr'   : '0',
+                                        'genom' : '0',
+                                        'link'  : null
+                                    }]
+                                ];
+                            </script>
+                            <!--    <a href="windows/main-map.html" class="main-map-item window-link" style="left:13.20%; top:41.10%">
+                                    <div class="main-map-item-icon"></div>
+                                    <div class="main-map-item-window">
+                                        <div class="main-map-item-window-title">Санкт-Петербург</div>
+                                        <div class="main-map-item-window-info">
+                                            <div class="main-map-item-window-info-item">
+                                                <div class="main-map-item-window-info-item-inner">
+                                                    <div class="main-map-item-window-info-icon"><img src="images/main-about-types-1.svg" alt="" /></div>
+                                                    <div class="main-map-item-window-info-text">11</div>
+                                                </div>
+                                            </div>
+                                            <div class="main-map-item-window-info-item">
+                                                <div class="main-map-item-window-info-item-inner">
+                                                    <div class="main-map-item-window-info-icon"><img src="images/main-about-types-2.svg" alt="" /></div>
+                                                    <div class="main-map-item-window-info-text">4</div>
+                                                </div>
+                                            </div>
+                                            <div class="main-map-item-window-info-item">
+                                                <div class="main-map-item-window-info-item-inner">
+                                                    <div class="main-map-item-window-info-icon"><img src="images/main-about-types-3.svg" alt="" /></div>
+                                                    <div class="main-map-item-window-info-text">6</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>-->
+                        </div>
+                    </div>
+                    <!-- main map END -->
+
+                    <!-- main news -->
+                    <div class="main-news">
+                        <div class="main-header">
+                            <div class="main-header-title">Новости</div>
+                            <div class="main-header-btn"><a href="#">Все новости<svg><use xlink:href="images/sprite.svg#main-header-btn"></use></svg></a></div>
+                        </div>
+
+                        <div class="main-news-list">
+                            <div class="main-news-item">
+                                <a href="#">
+                                    <div class="main-news-item-preview"><img src="files/main-news-1.jpg" alt="" /></div>
+                                    <div class="main-news-item-date">7 декабря 2020 <span>#НЦМУпоПр</span></div>
+                                    <div class="main-news-item-title">НЦМУ «Центр персонализированной медицины» сформировал новые отделы и лаборатории</div>
+                                </a>
+                            </div>
+                            <div class="main-news-item">
+                                <a href="#">
+                                    <div class="main-news-item-preview"><img src="files/main-news-2.jpg" alt="" /></div>
+                                    <div class="main-news-item-date">7 декабря 2020 <span>#НЦМУпоПр</span></div>
+                                    <div class="main-news-item-title">Начался набор магистрантов на программу повышения квалификации «Высокотехнологичные медицинские системы и комплексы»</div>
+                                </a>
+                            </div>
+                            <div class="main-news-item">
+                                <a href="#">
+                                    <div class="main-news-item-preview"><img src="files/main-news-3.jpg" alt="" /></div>
+                                    <div class="main-news-item-date">7 декабря 2020</div>
+                                    <div class="main-news-item-title">Новость о начале работы Научного центра мирового уровня «Передовые цифровые технологии» облетела весь мир. Охват аудитории составил 2,1 млрд человек</div>
+                                </a>
+                            </div>
+                            <div class="main-news-item">
+                                <a href="#">
+                                    <div class="main-news-item-preview"><img src="files/main-news-4.jpg" alt="" /></div>
+                                    <div class="main-news-item-date">7 декабря 2020 <span>#НЦМУпоПр</span></div>
+                                    <div class="main-news-item-title">Начался набор магистрантов на программу повышения квалификации «Высокотехнологичные медицинские системы и комплексы»</div>
+                                </a>
+                            </div>
+                            <div class="main-news-item">
+                                <a href="#">
+                                    <div class="main-news-item-preview"><img src="files/main-news-5.jpg" alt="" /></div>
+                                    <div class="main-news-item-date">7 декабря 2020</div>
+                                    <div class="main-news-item-title">Новость о начале работы Научного центра мирового уровня «Передовые цифровые технологии» облетела весь мир. Охват аудитории составил 2,1 млрд человек</div>
+                                </a>
+                            </div>
+                            <div class="main-news-item">
+                                <a href="#">
+                                    <div class="main-news-item-preview"><img src="files/main-news-6.jpg" alt="" /></div>
+                                    <div class="main-news-item-date">7 декабря 2020 <span>#НЦМУпоПр</span></div>
+                                    <div class="main-news-item-title">НЦМУ «Центр персонализированной медицины» сформировал новые отделы и лаборатории</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- main news END -->
+
+                    <!-- main about -->
+                    <div class="main-about">
+                        <div class="main-header">
+                            <div class="main-header-title">Об НЦМУ</div>
+                        </div>
+
+                        <div class="main-about-container">
+                            <div class="main-about-list">
+                                <div class="main-about-item">
+                                    <div class="main-about-item-inner">
+                                        <div class="main-about-item-title">Что такое НЦМУ?</div>
+                                        <div class="main-about-item-subtitle">НЦМУ — Научный центр мирового уровня.</div>
+                                        <div class="main-about-item-text">Центры создаются в целях осуществления прорывных исследований преимущественно фундаментального и поискового характера, направленных на решение задач, соответствующих мировому уровню актуальности и значимости</div>
+                                    </div>
+                                </div>
+
+                                <div class="main-about-item">
+                                    <div class="main-about-item-inner">
+                                        <div class="main-about-item-title">Цель создания НЦМУ</div>
+                                        <div class="main-about-item-subtitle">Основная цель - сохранение и удержание лидерства в НТР.</div>
+                                        <div class="main-about-item-text">Центры создаются в целях осуществления прорывных исследований преимущественно фундаментального и поискового характера, направленных на решение задач, соответствующих мировому уровню актуальности и значимости Центры создаются в целях осуществления прорывных исследований преимущественно фундаментального и поискового характера, направленных на решение задач, соответствующих мировому уровню актуальности и значимости</div>
+                                    </div>
+                                </div>
+
+                                <div class="main-about-item">
+                                    <div class="main-about-item-inner">
+                                        <div class="main-about-item-title">Типы НЦМУ</div>
+                                        <div class="main-about-types">
+                                            <div class="main-about-type">
+                                                <div class="main-about-type-icon"><img src="images/main-about-types-1.svg" alt="" /></div>
+                                                <div class="main-about-type-title">Международные математические центры</div>
+                                            </div>
+                                            <div class="main-about-type">
+                                                <div class="main-about-type-icon"><img src="images/main-about-types-2.svg" alt="" /></div>
+                                                <div class="main-about-type-title">НЦМУ, выполняющие исследования и разработки по приоритетам НТР</div>
+                                            </div>
+                                            <div class="main-about-type">
+                                                <div class="main-about-type-icon"><img src="images/main-about-types-3.svg" alt="" /></div>
+                                                <div class="main-about-type-title">Центры геномных исследований</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="main-about-item">
+                                    <div class="main-about-item-inner">
+                                        <div class="main-about-item-title">Планы реализации проекта</div>
+                                        <div class="main-about-plans">
+                                            <div class="main-about-plan">
+                                                <div class="main-about-plan-line" style="width:39.60%">в 2020</div>
+                                                <div class="main-about-plan-text">не менее</div>
+                                                <div class="main-about-plan-value">7</div>
+                                            </div>
+                                            <div class="main-about-plan">
+                                                <div class="main-about-plan-line" style="width:53.33%">в 2020</div>
+                                                <div class="main-about-plan-text">не менее</div>
+                                                <div class="main-about-plan-value">10</div>
+                                            </div>
+                                            <div class="main-about-plan">
+                                                <div class="main-about-plan-line" style="width:66.66%">в 2020</div>
+                                                <div class="main-about-plan-text">не менее</div>
+                                                <div class="main-about-plan-value">16</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- main about END -->
+
+                    <!-- main faq -->
+                    <div class="main-faq">
+                        <div class="main-header">
+                            <div class="main-header-title">Вопросы</div>
+                            <div class="main-header-btn"><a href="#">Все вопросы<svg><use xlink:href="images/sprite.svg#main-header-btn"></use></svg></a></div>
+                        </div>
+
+                        <div class="main-faq-list">
+                            <div class="main-faq-item">
+                                <div class="main-faq-item-header">Что такое НЦМУ?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
+                                <div class="main-faq-item-text">
+                                    В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                </div>
+                            </div>
+                            <div class="main-faq-item">
+                                <div class="main-faq-item-header">Чем будут заниматься НЦМУ?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
+                                <div class="main-faq-item-text">
+                                    В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                </div>
+                            </div>
+                            <div class="main-faq-item">
+                                <div class="main-faq-item-header">Сколько НЦМУ будет создано?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
+                                <div class="main-faq-item-text">
+                                    В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                </div>
+                            </div>
+                            <div class="main-faq-item">
+                                <div class="main-faq-item-header">Какие типы НЦМУ будут созданы?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
+                                <div class="main-faq-item-text">
+                                    В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- main faq END -->
+
+                </div>
+                <!-- container END -->
+
+            </div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <div class="footer-logo"><img src="images/footer-logo.png" alt="" /></div>
+                <div class="copyrights">
+                    Портал разработан при поддержке <a href="#">Минобрнауки России</a>
+                    <div class="footer-phone"><a href="tel:+74959162884">+7 (495) 916-28-84</a></div>
+                </div>
+                <div class="footer-menu">
+                    <ul>
+                        <li><a href="#">Центры</a></li>
+                        <li><a href="#">Советы</a></li>
+                        <li><a href="#">Результаты работы центров</a></li>
+                        <li><a href="#">Помощь</a></li>
+                        <li><a href="#">Личные кабинеты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-menu">
+                    <div class="footer-menu-title"><a href="#">Официальные документы<span>:</span></a></div>
+                    <ul>
+                        <li><a href="#">Нормативные правовые документы</a></li>
+                        <li><a href="#">Документы конкурсного отбора НЦМУ по приоритетам</a></li>
+                        <li><a href="#">Документы конкурсного отбора МЦМУ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-menu">
+                    <div class="footer-menu-title"><a href="#">Советы НЦМУ</a></div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            var pathTemplate = './';
+        </script>
+        <script src="js/fonts.js"></script>
+
+        <script src="js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/tools.js"></script>
+
+    </body>
+</html>
