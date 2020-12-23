@@ -7,9 +7,10 @@ $(document).ready(function() {
     });
 
     $('.main-map').each(function() {
-        $('.main-map-content').html('<svg width="939" height="534" viewBox="0 0 1107.77 630.12" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>');
+        $('.main-map-content').html('<svg viewBox="0 0 1107.77 630.12" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>');
 
         var newMap = '';
+        var newHints = '';
 
         for (var j = 0; j < opendataRegions.length; j++) {
             var curRegion = opendataRegions[j];
@@ -18,12 +19,39 @@ $(document).ready(function() {
                     var curURL = '';
                     if (mainRegionsData[i][1].link != null) {
                         curURL = ' data-url="' + mainRegionsData[i][1].link + '"';
+                        newHints += '<div class="main-map-item" style="left:' + (curRegion.center[0] / 1108 * 100) + '%; top:' + (curRegion.center[1] / 630 * 100) + '%">' +
+                                        '<div class="main-map-item-icon"></div>' +
+                                        '<div class="main-map-item-window" data-id="' + curRegion.id + '">' +
+                                            '<div class="main-map-item-window-title">' + curRegion.title + '</div>' +
+                                            '<div class="main-map-item-window-info">' +
+                                                '<div class="main-map-item-window-info-item">' +
+                                                    '<div class="main-map-item-window-info-item-inner">' +
+                                                        '<div class="main-map-item-window-info-icon"><img src="' + pathTemplate + 'images/main-about-types-1.svg" alt="" width="22" height="22" /></div>' +
+                                                        '<div class="main-map-item-window-info-text">' + mainRegionsData[i][1].math + '</div>' +
+                                                    '</div>' +
+                                                '</div>' +
+                                                '<div class="main-map-item-window-info-item">' +
+                                                    '<div class="main-map-item-window-info-item-inner">' +
+                                                        '<div class="main-map-item-window-info-icon"><img src="' + pathTemplate + 'images/main-about-types-2.svg" alt="" width="21" height="20" /></div>' +
+                                                        '<div class="main-map-item-window-info-text">' + mainRegionsData[i][1].ntr + '</div>' +
+                                                    '</div>' +
+                                                '</div>' +
+                                                '<div class="main-map-item-window-info-item">' +
+                                                    '<div class="main-map-item-window-info-item-inner">' +
+                                                        '<div class="main-map-item-window-info-icon"><img src="' + pathTemplate + 'images/main-about-types-3.svg" alt="" width="19" height="22" /></div>' +
+                                                        '<div class="main-map-item-window-info-text">' + mainRegionsData[i][1].genom + '</div>' +
+                                                    '</div>' +
+                                                '</div>' +
+                                            '</div>' +
+                                        '</div>' +
+                                    '</div>';
                     }
                     newMap += '<g data-id="' + curRegion.id + '"' + curURL + '>' + curRegion.svg + '</g>';
                 }
             }
         }
         $('.main-map-content svg').html(newMap);
+        $('.main-map-content').append(newHints);
 
     });
 
@@ -36,6 +64,14 @@ $(document).ready(function() {
         if ($(this).attr('data-url') !== undefined) {
             windowOpen($(this).attr('data-url'));
         }
+    });
+
+    $('body').on('mouseenter', '.main-map-content g', function(e) {
+        $('.main-map-item-window[data-id="' + $(this).attr('data-id') + '"]').addClass('visible');
+    });
+
+    $('body').on('mouseleave', '.main-map-content g', function(e) {
+        $('.main-map-item-window.visible').removeClass('visible');
     });
 
     $('body').on('keyup', function(e) {

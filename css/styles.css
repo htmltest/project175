@@ -58,21 +58,23 @@ header {background:#1c48a3; height:100px}
 .main-header {position:relative; overflow:hidden}
 .main-header-title {float:left; margin:5px 0 0 0; font-weight:bold; font-size:24px; line-height:28px; color:#0a0a0a}
 .main-header-btn {float:right}
-.main-header-btn a {display:block; background:#eef2f8; height:35px; padding:0 19px; font-weight:normal; font-size:13px; line-height:35px; color:#7e7e7e; text-decoration:none; text-transform:uppercase; letter-spacing:0.03em}
-.main-header-btn svg {display:inline-block; vertical-align:middle; margin:-2px 0 0 10px; width:15px; height:9px; fill:#989898}
+.main-header-btn a {display:block; background:#eef2f8; height:35px; padding:0 19px; font-weight:normal; font-size:13px; line-height:35px; color:#7e7e7e; text-decoration:none; text-transform:uppercase; letter-spacing:0.03em; transition:background 0.2s}
+.main-header-btn a:hover {background:#dde4f1}
+.main-header-btn svg {display:inline-block; vertical-align:middle; margin:-2px 0 0 10px; width:15px; height:9px; fill:#989898; transition:transform 0.2s}
+.main-header-btn a:hover svg {transform:translateX(5px)}
 
 .main-map {margin:54px 0 0 0}
 
 .main-map-container {margin:-33px 0 0 87px; position:relative}
 .main-map-content {width:939px; position:relative}
-.main-map-content svg {display:block}
-.main-map-content svg g {fill:#7097e9; transition:fill 0.2s; stroke:#fff; stroke-width:0.5px}
+.main-map-content svg {display:block; width:939px; height:534px}
+.main-map-content svg g {fill:#5095dc; transition:fill 0.2s; stroke:#fff; stroke-width:0.5px}
 .main-map-content svg g:hover {fill:#2e63d0}
 .main-map-content svg g[data-url] {cursor:pointer}
-.main-map-item {display:block; position:absolute; cursor:pointer}
+.main-map-item {display:block; position:absolute; pointer-events:none; width:100%}
 .main-map-item-icon {position:absolute; left:0; top:0; width:18px; height:18px; margin:-9px 0 0 -9px; background:#fff; border:2px solid #f03e3e; border-radius:50%}
 .main-map-item-window {display:none; position:absolute; left:0; transform:translateX(-50%); white-space:nowrap; bottom:8px; z-index:2; padding:15px; background:#fff; border:1px solid #d8d8d8; box-shadow:4px 4px 30px rgba(0, 0, 0, 0.15)}
-.main-map-item:hover .main-map-item-window {display:block}
+.main-map-item-window.visible {display:block}
 .main-map-item-window::before {content:""; display:block; position:absolute; left:50%; bottom:-7px; width:12px; height:12px; margin-left:-6px; background:#fff; border-left:1px solid #d8d8d8; border-bottom:1px solid #d8d8d8; transform:rotate(-45deg)}
 .main-map-item-window-title {font-weight:500; font-size:14px; line-height:21px; color:#000}
 .main-map-item-window-info {margin:10px 0 0 0; font-size:0; line-height:0; letter-spacing:-1px}
@@ -86,11 +88,13 @@ header {background:#1c48a3; height:100px}
 .main-news-list {margin:30px -10px -35px -10px; font-size:0; line-height:0; letter-spacing:-1px}
 .main-news-item {display:inline-block; vertical-align:top; padding:0 10px 35px 10px; width:33.33%}
 .main-news-item a {display:block; text-decoration:none}
-.main-news-item-preview {height:236px; position:relative; overflow:hidden}
+.main-news-item-preview {height:236px; position:relative; overflow:hidden; transition:top 0.2s; top:0}
+.main-news-item a:hover .main-news-item-preview {top:-5px}
 .main-news-item-preview img {display:block; width:100%; image-rendering:pixelated; image-rendering:-moz-crisp-edges; -ms-interpolation-mode:nearest-neighbor}
 .main-news-item-date {margin:16px 0 0 0; font-size:13px; line-height:25px; letter-spacing:0; text-transform:uppercase; color:#476ab4; font-weight:500}
 .main-news-item-date span {display:inline-block; vertical-align:top; height:25px; padding:0 8px; color:#fff; background:#476ab4; text-transform:none; margin:0 0 0 11px}
-.main-news-item-title {margin:10px 0 0 0; font-weight:500; font-size:16px; line-height:24px; letter-spacing:0; color:#000}
+.main-news-item-title {margin:10px 0 0 0; font-weight:500; font-size:16px; line-height:24px; letter-spacing:0; color:#000; transition:color 0.2s}
+.main-news-item a:hover .main-news-item-title {color:#1c48a3}
 
 .main-about {margin:85px 0 0 0}
 .main-about-container {margin:34px -999px 0 -999px; padding:26px 999px 46px 999px; background:#f1f4f9}
@@ -116,146 +120,36 @@ header {background:#1c48a3; height:100px}
 .main-faq {margin:90px 0 0 0; max-width:963px}
 .main-faq-list {border-top:1px solid #e5e5e5; margin:30px 0 0 0}
 .main-faq-item {border-bottom:1px solid #e5e5e5}
-.main-faq-item-header {position:relative; padding:16px 45px 13px 30px; cursor:pointer; font-weight:500; font-size:17px; line-height:26px; color:#333}
+.main-faq-item-header {position:relative; padding:16px 45px 13px 30px; cursor:pointer; font-weight:500; font-size:17px; line-height:26px; color:#333; transition:color 0.2s}
+.main-faq-item-header:hover {color:#666}
 .main-faq-item-header svg {display:block; width:15px; height:8px; position:absolute; right:0; top:50%; margin-top:-8px; fill:none; stroke:#1c48a3}
 .main-faq-item.open .main-faq-item-header svg {transform:rotate(-180deg)}
 .main-faq-item-text {display:none; color:#000; padding:1px 45px 21px 30px}
 
-footer {height:241px; background:#e2e2e2; padding:35px 0 0 0; font-weight:normal}
+footer {height:241px; margin:-241px 0 0 0; background:#e2e2e2; padding:35px 0 0 0; font-weight:normal}
 
 .footer-logo {float:left; width:67px}
 
-.copyrights {float:left; width:210px; padding:13px 74px 0 16px; color:#424242; font-size:12px; line-height:14px}
+.copyrights {float:left; width:210px; margin:13px 83px 0 16px; color:#424242; font-size:12px; line-height:14px}
+.copyrights a {color:#424242; text-decoration:underline}
+.copyrights a:hover {color:#424242; text-decoration:none}
+.footer-phone {padding:8px 0 0 0; font-size:16px; line-height:20px; font-weight:900}
+.footer-phone a {text-decoration:none}
+.footer-phone a:hover {text-decoration:underline}
 
-.copy a{
-	color: #424242;
-	text-decoration: underline;
-	}
-
-.copy a:hover{
-	color: #424242;
-	text-decoration: none;
-	}
-
-.bot_tel{
-	padding: 8px 0 0 0;
-	font-size: 16px;
-	line-height: 20px;
-	font-weight: 900;
-	}
-
-.bot_tel a{
-	text-decoration: none;
-	}
-
-.bot_tel a:hover{
-	text-decoration: underline;
-	}
-
-
-.show_bot_nav{
-	float: right;
-	display: none;
-	width: 49px;
-	height: 37px;
-	margin: 20px 15px 0 0;
-	position: relative;
-	cursor: pointer;
-	}
-
-.show_bot_nav span, .show_bot_nav:before, .show_bot_nav:after{
-	content: " ";
-	display: block;
-	width: 100%;
-	height: 5px;
-	background: #000;
-	border-radius: 2px;
-	position: absolute;
-	left: 0px;
-	transition: all 0.3s 0.02s ease;
-	}
-
-.show_bot_nav span{
-	top: 16px;
-	}
-
-.show_bot_nav:before {
-	top: 0px;
-	}
-
-.show_bot_nav:after {
-	top: 32px;
-	}
-
-.show_bot_nav.open span{
-	display: none;
-	}
-
-.show_bot_nav.open:before{
-	transform: rotate(45deg);
-	top: 17px;
-	}
-
-.show_bot_nav.open:after{
-	transform: rotate(-45deg);
-	top: 17px;
-	}
-
-@media (min-width: 761px) {
-.nav_bot{
-	display: block !important;
-	}
-}
-
-.nav_bot{
-	float: left;
-	width: 226px;
-	padding: 10px 0 0 37px;
-	color: #424242;
-	line-height: 20px;
-	}
-
-.nav_bot2{
-	width: 255px;
-	font-size: 14px;
-	line-height: 16px;
-	}
-
-.nav_bot3{
-	width: 210px;
-	font-size: 14px;
-	line-height: 16px;
-	}
-
-.nav_bot_t{
-	padding: 0 0 12px 0;
-	font-size: 16px;
-	line-height: 20px;
-	}
-
-.nav_bot ul li {
-	padding: 0 0 12px 0;
-	}
-
-.nav_bot2 ul li, .nav_bot3 ul li {
-	padding: 0 0 9px 14px;
-	position: relative;
-	}
-
-.nav_bot2 ul li:before, .nav_bot3 ul li:before {
-	content: " ";
-	display: block;
-	width: 9px;
-	height: 1px;
-	background: #424242;
-	position: absolute;
-	top: 7px;
-	left: 0px;
-	}
-
-.nav_bot ul li a, .nav_bot ul li a:hover {
-	color: #424242;
-	}
+.footer-menu {float:left; width:233px; margin:10px 0 0 37px; color:#424242; line-height:20px}
+.footer-menu+.footer-menu {width:264px; font-size:14px; line-height:16px}
+.footer-menu+.footer-menu+.footer-menu {width:176px; font-size:14px; line-height:16px}
+.footer-menu-title {padding:0 0 12px 0; font-size:16px; line-height:20px}
+.footer-menu ul {margin:0; padding:0; list-style:none}
+.footer-menu ul li {margin:0; padding:0 0 12px 0}
+.footer-menu ul li::before {display:none}
+.footer-menu+.footer-menu ul li,
+.footer-menu+.footer-menu+.footer-menu ul li {padding:0 0 9px 14px; position:relative}
+.footer-menu+.footer-menu ul li::after,
+.footer-menu+.footer-menu+.footer-menu ul li::after {content:""; display:block; width:9px; height:1px; background:#424242; position:absolute; top:7px; left:0px}
+.footer-menu a,
+.footer-menu a:hover {color:#424242}
 
 .window-open,
 .window-open body {overflow:hidden; position:fixed; left:0; top:0; right:0; bottom:0}
@@ -267,7 +161,7 @@ footer {height:241px; background:#e2e2e2; padding:35px 0 0 0; font-weight:normal
 .window-close {display:block; position:absolute; right:0; top:0; width:76px; height:60px}
 .window-close svg {display:block; position:absolute; left:50%; top:50%; width:36px; height:36px; margin:-18px 0 0 -18px; fill:none; stroke:#fff}
 
-.window-title {background:#182565; padding:17px 100px 16px 30px; color:#fff; font-weight:500; font-size:18px; line-height:27px}
+.window-title {background:#1c48a3; padding:17px 100px 16px 30px; color:#fff; font-weight:500; font-size:18px; line-height:27px}
 
 .window-info {width:767px}
 .window-info-container {padding:40px 30px 58px 30px}
@@ -285,9 +179,10 @@ footer {height:241px; background:#e2e2e2; padding:35px 0 0 0; font-weight:normal
 .window-info-item-cols::after {content:""; display:block; clear:both}
 .window-info-item-col-left {float:left; width:220px}
 .window-info-item-col-left+.window-info-item-col-right {margin:0 0 0 240px}
-.window-info-item-btn {display:inline-block; height:40px; padding:0 18px; font-size:16px; font-weight:normal; color:#000; line-height:40px; text-decoration:none; background:#f1f4f9; text-align:center}
-.window-info-item-btn:hover {color:#00; text-decoration:none; background:#f1f4f9}
+.window-info-item-btn {display:inline-block; height:40px; padding:0 18px; font-size:16px; font-weight:normal; color:#000; line-height:40px; text-decoration:none; background:#f1f4f9; text-align:center; transition:background 0.2s}
+.window-info-item-btn:hover {color:#000; text-decoration:none; background:#dde4f1}
 .window-info-item-btn svg {display:inline-block; vertical-align:middle; margin:-2px 10px 0 0; stroke:#1c48a3}
+.window-info-item-btn span {font-weight:300; margin:0 0 0 10px}
 .window-info-item-btn-presentation {width:100%}
 .window-info-item-btn-presentation svg {width:16px; height:18px; fill:#1c48a3; stroke:none}
 .window-info-item-btn-info svg {width:24px; height:24px; fill:none; stroke:#1c48a3}

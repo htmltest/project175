@@ -1,15 +1,15 @@
 <svg width="25" height="30" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M20.8736 11.1304L23.6562 14.6086L20.8736 18.0869" stroke="#0055CC"/>
-<rect width="14.7164" height="1.3913" transform="matrix(0.999998 0.00181345 -0.0183408 0.999832 8.37402 13.9131)" fill="#0055CC"/>
-<rect width="4.17391" height="1.3913" transform="matrix(0.999998 0.00181345 -0.0183408 0.999832 8.37793 23.7012)" fill="#0055CC"/>
-<rect width="4.17391" height="1.3913" transform="matrix(0.999998 0.00181345 -0.0183408 0.999832 8.37793 4.22314)" fill="#0055CC"/>
-<rect width="4.17391" height="1.3913" transform="matrix(0.999998 0.00181345 -0.0183408 0.999832 19.5078 23.7012)" fill="#0055CC"/>
-<rect width="4.17391" height="1.3913" transform="matrix(0.999998 0.00181345 -0.0183408 0.999832 19.5078 4.22314)" fill="#0055CC"/>
-<rect width="1.3913" height="6.95652" transform="matrix(-0.707038 0.707176 -0.707038 -0.707176 19.0078 26.3647)" fill="#0055CC"/>
-<rect width="1.3913" height="6.95652" transform="matrix(-0.707107 -0.707107 0.707245 -0.706969 14.0889 27.3486)" fill="#0055CC"/>
-<rect width="1.3913" height="6.95652" transform="matrix(-0.707038 0.707176 -0.707038 -0.707176 19.0078 6.88672)" fill="#0055CC"/>
-<rect width="1.3913" height="6.95652" transform="matrix(-0.707107 -0.707107 0.707245 -0.706969 14.0889 7.87061)" fill="#0055CC"/>
-<circle cx="3.47826" cy="14.6086" r="2.72826" stroke="#0055CC" stroke-width="1.5"/>
-<circle cx="3.47826" cy="24.3479" r="2.72826" stroke="#0055CC" stroke-width="1.5"/>
-<circle cx="3.47826" cy="4.86986" r="2.72826" stroke="#0055CC" stroke-width="1.5"/>
+<path d="M20.8736 11.1304L23.6562 14.6086L20.8736 18.0869" stroke="#1c48a3"/>
+<rect width="14.7164" height="1.3913" transform="matrix(0.999998 0.00181345 -0.0183408 0.999832 8.37402 13.9131)" fill="#1c48a3"/>
+<rect width="4.17391" height="1.3913" transform="matrix(0.999998 0.00181345 -0.0183408 0.999832 8.37793 23.7012)" fill="#1c48a3"/>
+<rect width="4.17391" height="1.3913" transform="matrix(0.999998 0.00181345 -0.0183408 0.999832 8.37793 4.22314)" fill="#1c48a3"/>
+<rect width="4.17391" height="1.3913" transform="matrix(0.999998 0.00181345 -0.0183408 0.999832 19.5078 23.7012)" fill="#1c48a3"/>
+<rect width="4.17391" height="1.3913" transform="matrix(0.999998 0.00181345 -0.0183408 0.999832 19.5078 4.22314)" fill="#1c48a3"/>
+<rect width="1.3913" height="6.95652" transform="matrix(-0.707038 0.707176 -0.707038 -0.707176 19.0078 26.3647)" fill="#1c48a3"/>
+<rect width="1.3913" height="6.95652" transform="matrix(-0.707107 -0.707107 0.707245 -0.706969 14.0889 27.3486)" fill="#1c48a3"/>
+<rect width="1.3913" height="6.95652" transform="matrix(-0.707038 0.707176 -0.707038 -0.707176 19.0078 6.88672)" fill="#1c48a3"/>
+<rect width="1.3913" height="6.95652" transform="matrix(-0.707107 -0.707107 0.707245 -0.706969 14.0889 7.87061)" fill="#1c48a3"/>
+<circle cx="3.47826" cy="14.6086" r="2.72826" stroke="#1c48a3" stroke-width="1.5"/>
+<circle cx="3.47826" cy="24.3479" r="2.72826" stroke="#1c48a3" stroke-width="1.5"/>
+<circle cx="3.47826" cy="4.86986" r="2.72826" stroke="#1c48a3" stroke-width="1.5"/>
 </svg>
