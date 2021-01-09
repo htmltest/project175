@@ -12,43 +12,46 @@ $(document).ready(function() {
         var newMap = '';
         var newHints = '';
 
-        for (var j = 0; j < opendataRegions.length; j++) {
-            var curRegion = opendataRegions[j];
-            for (var i = 0; i < mainRegionsData.length; i++) {
-                if (curRegion.id == mainRegionsData[i][0]) {
-                    var curURL = '';
-                    if (mainRegionsData[i][1].link != null) {
-                        curURL = ' data-url="' + mainRegionsData[i][1].link + '"';
-                        newHints += '<div class="main-map-item" style="left:' + (curRegion.center[0] / 1108 * 100) + '%; top:' + (curRegion.center[1] / 630 * 100) + '%">' +
-                                        '<div class="main-map-item-icon"></div>' +
-                                        '<div class="main-map-item-window" data-id="' + curRegion.id + '">' +
-                                            '<div class="main-map-item-window-title">' + curRegion.title + '</div>' +
-                                            '<div class="main-map-item-window-info">' +
-                                                '<div class="main-map-item-window-info-item">' +
-                                                    '<div class="main-map-item-window-info-item-inner">' +
-                                                        '<div class="main-map-item-window-info-icon"><img src="' + pathTemplate + 'images/main-about-types-1.svg" alt="" width="22" height="22" /></div>' +
-                                                        '<div class="main-map-item-window-info-text">' + mainRegionsData[i][1].math + '</div>' +
-                                                    '</div>' +
-                                                '</div>' +
-                                                '<div class="main-map-item-window-info-item">' +
-                                                    '<div class="main-map-item-window-info-item-inner">' +
-                                                        '<div class="main-map-item-window-info-icon"><img src="' + pathTemplate + 'images/main-about-types-2.svg" alt="" width="21" height="20" /></div>' +
-                                                        '<div class="main-map-item-window-info-text">' + mainRegionsData[i][1].ntr + '</div>' +
-                                                    '</div>' +
-                                                '</div>' +
-                                                '<div class="main-map-item-window-info-item">' +
-                                                    '<div class="main-map-item-window-info-item-inner">' +
-                                                        '<div class="main-map-item-window-info-icon"><img src="' + pathTemplate + 'images/main-about-types-3.svg" alt="" width="19" height="22" /></div>' +
-                                                        '<div class="main-map-item-window-info-text">' + mainRegionsData[i][1].genom + '</div>' +
-                                                    '</div>' +
-                                                '</div>' +
-                                            '</div>' +
+        for (var i = 0; i < opendataRegions.length; i++) {
+            var curRegion = opendataRegions[i];
+            newMap += '<g>' + curRegion.svg + '</g>';
+        }
+
+        for (var i = 0; i < mainRegionsData.length; i++) {
+            var curCity = mainRegionsData[i];
+            var curURL = ' data-url="' +  + '"';
+            newHints += '<a href="' + curCity.link + '" class="window-link main-map-item" style="left:' + (curCity.coords[0] / 1108 * 100) + '%; top:' + (curCity.coords[1] / 630 * 100) + '%">' +
+                            '<div class="main-map-item-icon"></div>' +
+                            '<div class="main-map-item-window">' +
+                                '<div class="main-map-item-window-title">' + curCity.title + '</div>' +
+                                '<div class="main-map-item-window-info">' +
+                                    '<div class="main-map-item-window-info-item">' +
+                                        '<div class="main-map-item-window-info-item-inner">' +
+                                            '<div class="main-map-item-window-info-icon"><img src="' + pathTemplate + 'images/main-about-types-1.svg" alt="" width="22" height="22" /></div>' +
+                                            '<div class="main-map-item-window-info-text">' + curCity.math + '</div>' +
                                         '</div>' +
-                                    '</div>';
-                    }
-                    newMap += '<g data-id="' + curRegion.id + '"' + curURL + '>' + curRegion.svg + '</g>';
-                }
-            }
+                                    '</div>' +
+                                    '<div class="main-map-item-window-info-item">' +
+                                        '<div class="main-map-item-window-info-item-inner">' +
+                                            '<div class="main-map-item-window-info-icon"><img src="' + pathTemplate + 'images/main-about-types-2.svg" alt="" width="21" height="20" /></div>' +
+                                            '<div class="main-map-item-window-info-text">' + curCity.genom + '</div>' +
+                                        '</div>' +
+                                    '</div>' +
+                                    '<div class="main-map-item-window-info-item">' +
+                                        '<div class="main-map-item-window-info-item-inner">' +
+                                            '<div class="main-map-item-window-info-icon"><img src="' + pathTemplate + 'images/main-about-types-3.svg" alt="" width="19" height="22" /></div>' +
+                                            '<div class="main-map-item-window-info-text">' + curCity.ntr + '</div>' +
+                                        '</div>' +
+                                    '</div>' +
+                                    '<div class="main-map-item-window-info-item">' +
+                                        '<div class="main-map-item-window-info-item-inner">' +
+                                            '<div class="main-map-item-window-info-icon"><img src="' + pathTemplate + 'images/main-about-types-4.svg" alt="" width="24" height="24" /></div>' +
+                                            '<div class="main-map-item-window-info-text">' + curCity.nomc + '</div>' +
+                                        '</div>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>' +
+                        '</a>';
         }
         $('.main-map-content svg').html(newMap);
         $('.main-map-content').append(newHints);
@@ -58,20 +61,6 @@ $(document).ready(function() {
     $('body').on('click', '.window-link', function(e) {
         windowOpen($(this).attr('href'));
         e.preventDefault();
-    });
-
-    $('body').on('click', '.main-map-content g', function(e) {
-        if ($(this).attr('data-url') !== undefined) {
-            windowOpen($(this).attr('data-url'));
-        }
-    });
-
-    $('body').on('mouseenter', '.main-map-content g', function(e) {
-        $('.main-map-item-window[data-id="' + $(this).attr('data-id') + '"]').addClass('visible');
-    });
-
-    $('body').on('mouseleave', '.main-map-content g', function(e) {
-        $('.main-map-item-window.visible').removeClass('visible');
     });
 
     $('body').on('keyup', function(e) {
