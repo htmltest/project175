@@ -23,8 +23,25 @@ iframe {border:none; max-width:100%}
 
 ::-ms-clear {display:none}
 
+h1 {font-weight:bold; font-size:36px; line-height:47px; margin:30px 0 20px 0; padding:0}
+p {margin:10px 0; padding:0}
+.anonce-text {font-size:18px; line-height:27px; margin:30px 0; font-weight:normal}
+hr {margin:60px 0 40px 0; height:1px; border:none; background:#c4c4c4}
+
 .container {max-width:1200px; margin:0 auto; padding:0 20px}
 .container::after {content:""; display:block; clear:both}
+
+.pager {margin:70px 0 0 0; font-size:0; line-height:0; letter-spacing:-1px; text-align:center}
+.pager a,
+.pager span {display:inline-block; vertical-align:top; width:45px; height:45px; font-weight:normal; font-size:16px; line-height:45px; color:#000; text-decoration:none; text-align:center; position:relative; margin:0 1px}
+.pager a:hover {color:#1d36b4}
+.pager a.pager-prev {margin:0 29px 0 0; position:relative; border:1px solid #dbdbdb}
+.pager a.pager-next {margin:0 0 0 29px; position:relative; border:1px solid #dbdbdb}
+.pager a.pager-prev svg,
+.pager a.pager-next svg {display:block; position:absolute; left:50%; top:50%; width:9px; height:14px; stroke:#3c3d3e; margin:-7px 0 0 -4.5px; fill:none; transition:stroke 0.2s}
+.pager a.pager-prev:hover svg,
+.pager a.pager-next:hover svg {stroke:#1d36b4}
+.pager a.active {font-weight:500; color:#fff; background:#1d36b4}
 
 .wrapper {width:100%; min-height:100%; min-width:480px; position:relative; overflow:hidden}
 .wrapper-inner {padding:0 0 327px 0}
@@ -114,6 +131,10 @@ header {background:#1c48a3; height:100px}
     .nav ul li a:hover,
     .nav ul li.active a {color:#000; background:transparent}
 }
+
+.breadcrumbs {margin:31px 0 0 0; font-size:14px; line-height:16px; font-weight:normal; color:#6c6c6c}
+.breadcrumbs a {color:#a1a1a1; text-decoration:none}
+.breadcrumbs a:hover {color:#1c48a3}
 
 .main-header {position:relative; overflow:hidden}
 .main-header-title {float:left; margin:5px 0 0 0; font-weight:bold; font-size:24px; line-height:28px; color:#0a0a0a}
@@ -240,7 +261,7 @@ header {background:#1c48a3; height:100px}
 .main-faq-item {border-bottom:1px solid #e5e5e5}
 .main-faq-item-header {position:relative; padding:16px 45px 13px 30px; cursor:pointer; font-weight:500; font-size:17px; line-height:26px; color:#333; transition:color 0.2s}
 .main-faq-item-header:hover {color:#666}
-.main-faq-item-header svg {display:block; width:15px; height:8px; position:absolute; right:0; top:50%; margin-top:-4px; fill:none; stroke:#1c48a3}
+.main-faq-item-header svg {display:block; width:15px; height:8px; position:absolute; right:0; top:24px; fill:none; stroke:#1c48a3}
 .main-faq-item.open .main-faq-item-header svg {transform:rotate(-180deg)}
 .main-faq-item-text {display:none; color:#000; padding:1px 45px 21px 30px}
 
@@ -408,3 +429,111 @@ footer {height:241px; margin:-241px 0 0 0; background:#e2e2e2; padding:35px 0 0 
     .window-info-item-org:first-child {margin:0}
     .window-info-item-org-title {font-size:18px; line-height:27px; color:#181818; font-weight:normal}
 }
+
+.news-header {margin:30px 0 0 0}
+.news-header::after {content:""; display:block; clear:both}
+.news-header h1 {float:left; margin:0}
+
+.news .main-news-list {margin:0 -10px}
+.news .main-news-item {padding:45px 10px 0 10px}
+
+.news-detail {margin:30px auto 0 auto; width:766px; position:relative}
+.news-detail-top {text-align:center; color:#676767; font-weight:normal; font-size:18px; line-height:30px}
+.news-detail-tag {font-weight:500; margin:0 0 0 21px}
+.news-detail-tag a {text-decoration:none; color:#fff; background:#476ab4; transition:background 0.2s; padding:0 11px; display:inline-block; vertical-align:top; height:30px}
+.news-detail-tag a:hover {background:#1c48a3}
+.news-detail-header {margin:30px -103px 0 -103px; font-weight:bold; font-size:36px; line-height:50px; color:#0a0a0a; text-align:center}
+.news-detail-social {margin:30px 0 0 0; text-align:center}
+.news-detail-social-title {font-weight:normal; font-size:18px; line-height:27px; color:#676767}
+.news-detail-social-links {margin:12px 0 0 0; font-size:0; line-height:0; letter-spacing:-1px}
+.news-detail-social-links a {display:inline-block; vertical-align:top; width:30px; height:30px; margin:0 0 0 20px; border-radius:50%; overflow:hidden; position:relative}
+.news-detail-social-links a:first-child {margin:0}
+.news-detail-social-links a svg {display:block; width:30px; height:30px; fill:#1c48a3; transition:fill 0.2s; border-radius:50%}
+.news-detail-social-links a:hover svg {fill:#476ab4}
+.news-detail-container {margin:46px 0 0 0}
+.news-detail-photo {margin:40px -103px}
+.news-detail-photo img {display:block; width:100%}
+.news-detail-files {margin:60px 0 0 0}
+.news-detail-files-title {font-weight:500; font-size:20px; line-height:28px; color:#404040}
+.news-detail-files .docs-group-list {margin:25px -65px 0 -30px; max-width:none}
+.news-detail-files .docs-group-title {font-size:16px; line-height:24px}
+.news-detail-files .docs-group-list .file-link {margin:0 10px 14px 30px}
+
+.news-back-link {position:absolute; left:-159px; top:0}
+.news-back-link a {display:block; background:rgba(205, 216, 236, 0.34); height:35px; padding:0 14px; font-weight:normal; font-size:13px; line-height:35px; color:#7e7e7e; text-decoration:none; text-transform:uppercase; letter-spacing:0.03em; transition:background 0.2s; border-radius:3px}
+.news-back-link a:hover {background:#dde4f1}
+.news-back-link svg {display:inline-block; vertical-align:middle; margin:-2px 9px 0 0; width:15px; height:9px; fill:#989898; transition:transform 0.2s}
+.news-back-link a:hover svg {transform:translateX(-5px)}
+.news-back-link svg:nth-child(2) {display:none}
+
+.news-other {margin:70px -999px -86px -999px; padding:71px 999px 88px 999px; background:#f5f8ff}
+.news-other-title {font-size:24px; line-height:28px; font-weight:bold; color:#0a0a0a}
+.news-other .main-news-list {margin:33px -10px 0 -10px}
+.main-news-item {padding:33px 10px 0 10px}
+
+.docs {margin:54px 0 0 0}
+.docs-group {margin:40px 0 0 0; padding:40px 0 0 0; border-top:1px solid #dddddd}
+.docs-group:first-child {margin:0; padding:0; border-top:none}
+.docs-group-title {font-weight:normal; font-size:20px; line-height:30px; color:#191919}
+.docs-group-text {margin:10px 0 30px 0; max-width:766px}
+.docs-group-list {margin:30px 0 0 -58px; column-count:2; max-width:960px; -webkit-column-rule:1px outset #dddddd; -moz-column-rule:1px outset #dddddd; column-rule:1px outset #dddddd}
+.docs-group-list .file-link {margin:0 10px 14px 58px}
+
+.file-link {margin:14px 0}
+.file-link a {display:inline-block; text-decoration:none; position:relative; padding:0 0 0 35px; color:#262626}
+.file-link-icon {display:block; position:absolute; left:0; top:8px; width:25px; line-height:0}
+.file-link-icon svg {display:block; width:25px; height:26px; fill:none}
+.file-link-title {font-weight:normal; transition:color 0.2s; overflow-wrap:break-word; word-wrap:break-word; word-break:break-all; word-break:break-word; hyphens:auto}
+.file-link a:hover .file-link-title {color:#1c48a3}
+.file-link-info {font-size:13px; line-height:18px; color:#898989}
+.file-link-info span {color:#c4c4c4}
+
+.docs+.pager {text-align:left}
+
+.page-404 {max-width:470px; margin:104px auto 0 auto; text-align:center}
+.page-404-title {font-weight:normal; font-size:144px; line-height:169px; color:#1c48a3}
+.page-404-subtitle {margin:20px 0 0 0; font-weight:bold; font-size:24px; line-height:28px; color:#0a0a0a}
+.page-404-text {margin:20px 0 0 0; color:#191919}
+.page-404-question {margin:40px 0 0 0; padding:20px 0 0 0; border-top:1px solid #ddd}
+.page-404-link {margin:14px 0 0 0}
+.page-404-link a {display:inline-block; vertical-align:top; height:48px; padding:0 32px; font-weight:normal; font-size:16px; line-height:48px; color:#000; background:rgba(29, 54, 180, 0.1); transition:background 0.2s; text-decoration:none}
+.page-404-link a:hover {background:rgba(29, 54, 180, 0.2)}
+
+.faq-menu {display:table; max-width:993px; margin:23px 0 0 -20px; line-height:21px; border-collapse:separate; border-spacing:0 20px}
+.faq-menu a {display:table-cell; vertical-align:middle; padding:11px 20px; text-decoration:none; color:#3d3d3d; border-radius:2px}
+.faq-menu a:hover {color:#1c48a3}
+.faq-menu a.active {background:rgba(0, 131, 189, 0.12)}
+
+.faq {max-width:973px; margin:64px 0 0 0}
+.faq+.faq {margin:77px 0 0 0}
+.faq-group-title {font-weight:bold; font-size:24px; line-height:28px; color:#404040}
+.faq .main-faq-list {margin:25px 0 0 0}
+.faq-group-subtitle {margin:30px 0 0 0; max-width:740px; font-weight:500; font-size:20px; line-height:28px; color:#404040}
+.faq .main-faq-list+.faq-group-subtitle {margin:40px 0 0 0}
+.faq .faq-group-subtitle+.main-faq-list {margin:20px 0 0 0}
+
+.search-form {max-width:873px; margin:30px 0 0 0}
+.search-form form {position:relative; margin:0; padding:0; border:2px solid #e5e5e5; height:59px; padding:0 56px 0 0}
+.search-form-input input {position:relative; border:none; font:normal 16px/24px Arial, sans-serif; color:#000; vertical-align:top; margin:0; padding:16px 14px 17px 14px; width:100%; height:57px; box-sizing:border-box; outline:none; border-radius:0; background:transparent; -webkit-appearance:none}
+.fonts-loaded .search-form-input input {font-family:Roboto, sans-serif}
+.search-form-input input::-webkit-input-placeholder {opacity:1; color:#999999}
+.search-form-input input::-moz-placeholder {opacity:1; color:#999999}
+.search-form-input input:-ms-input-placeholder {opacity:1; color:#999999}
+.search-form-submit {position:absolute; right:0; top:0}
+.search-form-submit button {display:block; width:56px; height:57px; background:transparent; border:none; -webkit-appearance:none; cursor:pointer; font-size:0; line-height:0; letter-spacing:-1px; position:relative}
+.search-form-submit button svg {display:block; width:20px; height:20px; fill:#1c48a3; position:absolute; right:18px; top:18px}
+
+.search-results {max-width:873px; margin:40px 0 0 0}
+.search-result {margin:30px 0 0 0; padding:30px 0 0 0; border-top:2px solid #e5e5e5}
+.search-result:first-child {margin:0; padding:0; border-top:none}
+.search-result-title {font-weight:bold; font-size:20px; line-height:26px; color:#191919}
+.search-result-title a {color:#191919; text-decoration:none; transition:color 0.2s}
+.search-result-title a:hover {color:#1c48a3}
+.search-result-title b {font-weight:bold; background:#fff494}
+.search-result-anonce {margin:10px 0 0 0; color:#191919}
+.search-result-anonce b {font-weight:300; background:#fff494}
+.search-result-path {margin:15px 0 0 0; font-size:14px; line-height:16px; font-weight:normal; color:#6c6c6c}
+.search-result-path a {color:#a1a1a1; text-decoration:none; transition:color 0.2s}
+.search-result-path a:hover {color:#1c48a3}
+
+.search-results+.pager {text-align:left; margin:50px 0 0 0}

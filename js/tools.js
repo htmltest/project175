@@ -124,6 +124,14 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $('.faq-menu a').click(function(e) {
+        var curBlock = $(this.hash);
+        if (curBlock.length == 1) {
+            $('html, body').animate({'scrollTop': curBlock.offset().top});
+            e.preventDefault();
+        }
+    });
+
 });
 
 function windowOpen(linkWindow, dataWindow) {
