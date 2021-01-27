@@ -6,6 +6,9 @@
 
         <link rel="stylesheet" href="css/styles.css" />
         <link rel="stylesheet" href="js/mcustomscrollbar/jquery.mCustomScrollbar.css" />
+        <link rel="stylesheet" href="js/slick/slick.css" />
+        <link rel="stylesheet" href="js/select2/select2.css" />
+        <link rel="stylesheet" href="js/air-datepicker/datepicker.css" />
 
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width" />
@@ -64,10 +67,35 @@
                 <!-- container -->
                 <div class="container">
 
-                    <div class="breadcrumbs"><a href="#">Эксперт РИЭПП</a> &nbsp; — &nbsp; Поданные предложения</div>
+                    <div class="breadcrumbs"><a href="#">Эксперт РИЭПП</a> &nbsp; <span>—</span> &nbsp; Поданные предложения</div>
 
                     <div class="news-header">
                         <h1>Новости</h1>
+                        <a href="#" class="news-header-filter-link"><svg><use xlink:href="images/sprite.svg#filter-icon"></use></svg><svg><use xlink:href="images/sprite.svg#filter-close-icon"></use></svg></a>
+                        <div class="news-header-filter">
+                            <form action="#" method="post">
+                                <div class="news-header-filter-search">
+                                    <div class="search-form">
+                                        <div class="search-form-input"><input type="text" name="search" value="" placeholder="Поиск..." /></div>
+                                        <div class="search-form-submit"><button><svg><use xlink:href="images/sprite.svg#header-search"></use></svg></button></div>
+                                    </div>
+                                </div>
+                                <div class="news-header-filter-tag">
+                                    <div class="form-select">
+                                        <select name="tag" data-placeholder="Тег">
+                                            <option value=""></option>
+                                            <option value="1">#НЦМУпоПр</option>
+                                            <option value="2">#Тег 2</option>
+                                            <option value="3">#Тег 3</option>
+                                            <option value="4">#НЦМУ «Центр персонализированной медицины» сформировал новые отделы и лаборатории Новость о начале работы Научного центра мирового уровня «Передовые цифровые технологии» облетела весь мир. Охват аудитории составил 2,1 млрд человек</option>
+                                            <option value="5">#Тег 5</option>
+                                            <option value="6">#Тег 6</option>
+                                            <option value="7">#Тег 7</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
 
                     <!-- news -->
@@ -186,6 +214,8 @@
             </div>
         </footer>
 
+        <a href="#" class="up-link"><svg><use xlink:href="images/sprite.svg#up-link"></use></svg></a>
+
         <script>
             var pathTemplate = './';
         </script>
@@ -196,6 +226,13 @@
 
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="js/mcustomscrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="js/slick/slick.min.js"></script>
+        <script src="js/select2/select2.min.js"></script>
+        <script src="js/select2/ru.js"></script>
+        <script src="js/jquery.mask.min.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/air-datepicker/datepicker.min.js"></script>
         <script src="js/tools.js"></script>
 
     </body>

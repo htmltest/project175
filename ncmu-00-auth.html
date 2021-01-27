@@ -67,12 +67,30 @@
                 <!-- container -->
                 <div class="container">
 
-                    <div class="page-404">
-                        <div class="page-404-title">404</div>
-                        <div class="page-404-subtitle">Страница не найдена</div>
-                        <div class="page-404-text">Это значит, что запрашиваемая вами страница была удалена, перемещена или вы просто набрали неточный адрес</div>
-                        <div class="page-404-question">Остались вопросы?</div>
-                        <div class="page-404-link"><a href="#">Напишите нам</a></div>
+                    <div class="auth">
+                        <h1>Авторизация</h1>
+                        <form action="#" method="post">
+
+                            <div class="form-input"><span>Логин</span><input type="text" name="login" value="" class="required" /></div>
+
+                            <div class="form-input"><span>Пароль</span><input type="password" name="password" value="" class="required" /></div>
+
+                            <div class="form-checkbox">
+                                <label><input type="checkbox" name="remember" /><span>Запомнить меня на этом компьютере</span></label>
+                            </div>
+                            <div class="form-submit"><button type="submit" class="btn">Войти</button></div>
+
+                            <div class="auth-links">
+                                <a href="#">Забыли пароль?</a>
+                                <a href="#">Регистрироваться</a>
+                            </div>
+
+                            <div class="auth-feedback">
+                                <div class="auth-feedback-title">Остались вопросы?</div>
+                                <div class="auth-feedback-link"><a href="#">Напишите нам</a></div>
+                            </div>
+
+                        </form>
                     </div>
 
                 </div>

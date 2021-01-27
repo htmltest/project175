@@ -6,6 +6,9 @@
 
         <link rel="stylesheet" href="css/styles.css" />
         <link rel="stylesheet" href="js/mcustomscrollbar/jquery.mCustomScrollbar.css" />
+        <link rel="stylesheet" href="js/slick/slick.css" />
+        <link rel="stylesheet" href="js/select2/select2.css" />
+        <link rel="stylesheet" href="js/air-datepicker/datepicker.css" />
 
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width" />
@@ -64,7 +67,7 @@
                 <!-- container -->
                 <div class="container">
 
-                    <div class="breadcrumbs"><a href="#">Эксперт РИЭПП</a> &nbsp; — &nbsp; Поданные предложения</div>
+                    <div class="breadcrumbs"><a href="#">Эксперт РИЭПП</a> &nbsp; <span>—</span> &nbsp; Поданные предложения</div>
 
                     <h1>Вопросы и ответы</h1>
 
@@ -75,162 +78,168 @@
                     </div>
 
                     <div class="faq">
-                        <div class="faq-group-title" id="faq1">Общие вопросы</div>
-                        <div class="main-faq-list">
-                            <div class="main-faq-item">
-                                <div class="main-faq-item-header">Для чего создан этот сайт?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
-                                <div class="main-faq-item-text">
-                                    В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                        <div class="faq-group-title" id="faq1">Общие вопросы<svg><use xlink:href="images/sprite.svg#faq-group-title"></use></svg></div>
+                        <div class="faq-group-container">
+                            <div class="main-faq-list">
+                                <div class="main-faq-item">
+                                    <div class="main-faq-item-header">Для чего создан этот сайт?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
+                                    <div class="main-faq-item-text">
+                                        В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="main-faq-item">
-                                <div class="main-faq-item-header">Кто может принять участие в конкурсном отборе?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
-                                <div class="main-faq-item-text">
-                                    В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                <div class="main-faq-item">
+                                    <div class="main-faq-item-header">Кто может принять участие в конкурсном отборе?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
+                                    <div class="main-faq-item-text">
+                                        В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="main-faq-item">
-                                <div class="main-faq-item-header">Что такое НЦМУ?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
-                                <div class="main-faq-item-text">
-                                    В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                <div class="main-faq-item">
+                                    <div class="main-faq-item-header">Что такое НЦМУ?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
+                                    <div class="main-faq-item-text">
+                                        В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="main-faq-item">
-                                <div class="main-faq-item-header">Для чего создан этот сайт?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
-                                <div class="main-faq-item-text">
-                                    В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                <div class="main-faq-item">
+                                    <div class="main-faq-item-header">Для чего создан этот сайт?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
+                                    <div class="main-faq-item-text">
+                                        В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="main-faq-item">
-                                <div class="main-faq-item-header">НЦМУ, созданный несколькими участниками центра в форме объединения без образования юридического лица (консорциума), может:<br /> а) являться структурным подразделением одновременно двух и более участников центра?<br /> б) являться совокупностью ассоциированных, но самостоятельных структурных подразделений одновременно двух и более участников центра?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
-                                <div class="main-faq-item-text">
-                                    В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                <div class="main-faq-item">
+                                    <div class="main-faq-item-header">НЦМУ, созданный несколькими участниками центра в форме объединения без образования юридического лица (консорциума), может:<br /> а) являться структурным подразделением одновременно двух и более участников центра?<br /> б) являться совокупностью ассоциированных, но самостоятельных структурных подразделений одновременно двух и более участников центра?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
+                                    <div class="main-faq-item-text">
+                                        В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="main-faq-item">
-                                <div class="main-faq-item-header">Кто может принять участие в конкурсном отборе?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
-                                <div class="main-faq-item-text">
-                                    В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                <div class="main-faq-item">
+                                    <div class="main-faq-item-header">Кто может принять участие в конкурсном отборе?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
+                                    <div class="main-faq-item-text">
+                                        В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="main-faq-item">
-                                <div class="main-faq-item-header">Что такое НЦМУ?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
-                                <div class="main-faq-item-text">
-                                    В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                <div class="main-faq-item">
+                                    <div class="main-faq-item-header">Что такое НЦМУ?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
+                                    <div class="main-faq-item-text">
+                                        В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="main-faq-item">
-                                <div class="main-faq-item-header">Для чего создан этот сайт?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
-                                <div class="main-faq-item-text">
-                                    В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq">
-                        <div class="faq-group-title" id="faq2">Вопросы по конкурсному отбору НЦМУ, выполняющих  исследования и разработки по приоритетам НТР</div>
-
-                        <div class="faq-group-subtitle">I. Вопросы по разделу «Опись заявки для участия в конкурсном отборе» (Форма 1 Конкурсной документации)</div>
-                        <div class="main-faq-list">
-                            <div class="main-faq-item">
-                                <div class="main-faq-item-header">Для чего создан этот сайт?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
-                                <div class="main-faq-item-text">
-                                    В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
-                                </div>
-                            </div>
-                            <div class="main-faq-item">
-                                <div class="main-faq-item-header">Кто может принять участие в конкурсном отборе?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
-                                <div class="main-faq-item-text">
-                                    В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
-                                </div>
-                            </div>
-                            <div class="main-faq-item">
-                                <div class="main-faq-item-header">Что такое НЦМУ?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
-                                <div class="main-faq-item-text">
-                                    В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
-                                </div>
-                            </div>
-                            <div class="main-faq-item">
-                                <div class="main-faq-item-header">Для чего создан этот сайт?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
-                                <div class="main-faq-item-text">
-                                    В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="faq-group-subtitle">II. Вопросы по разделу «Заявление на участие в конкурсном отборе» (Форма 2 Конкурсной документации)</div>
-                        <div class="main-faq-list">
-                            <div class="main-faq-item">
-                                <div class="main-faq-item-header">Для чего создан этот сайт?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
-                                <div class="main-faq-item-text">
-                                    В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
-                                </div>
-                            </div>
-                            <div class="main-faq-item">
-                                <div class="main-faq-item-header">Кто может принять участие в конкурсном отборе?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
-                                <div class="main-faq-item-text">
-                                    В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
-                                </div>
-                            </div>
-                            <div class="main-faq-item">
-                                <div class="main-faq-item-header">Что такое НЦМУ?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
-                                <div class="main-faq-item-text">
-                                    В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
-                                </div>
-                            </div>
-                            <div class="main-faq-item">
-                                <div class="main-faq-item-header">Для чего создан этот сайт?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
-                                <div class="main-faq-item-text">
-                                    В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                <div class="main-faq-item">
+                                    <div class="main-faq-item-header">Для чего создан этот сайт?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
+                                    <div class="main-faq-item-text">
+                                        В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="faq">
-                        <div class="faq-group-title" id="faq3">Вопросы по конкурсному отбору международных математических центров</div>
-                        <div class="main-faq-list">
-                            <div class="main-faq-item">
-                                <div class="main-faq-item-header">Для чего создан этот сайт?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
-                                <div class="main-faq-item-text">
-                                    В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                        <div class="faq-group-title" id="faq2">Вопросы по конкурсному отбору НЦМУ, выполняющих  исследования и разработки по приоритетам НТР<svg><use xlink:href="images/sprite.svg#faq-group-title"></use></svg></div>
+                        <div class="faq-group-container">
+
+                            <div class="faq-group-subtitle">I. Вопросы по разделу «Опись заявки для участия в конкурсном отборе» (Форма 1 Конкурсной документации)</div>
+                            <div class="main-faq-list">
+                                <div class="main-faq-item">
+                                    <div class="main-faq-item-header">Для чего создан этот сайт?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
+                                    <div class="main-faq-item-text">
+                                        В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                    </div>
+                                </div>
+                                <div class="main-faq-item">
+                                    <div class="main-faq-item-header">Кто может принять участие в конкурсном отборе?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
+                                    <div class="main-faq-item-text">
+                                        В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                    </div>
+                                </div>
+                                <div class="main-faq-item">
+                                    <div class="main-faq-item-header">Что такое НЦМУ?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
+                                    <div class="main-faq-item-text">
+                                        В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                    </div>
+                                </div>
+                                <div class="main-faq-item">
+                                    <div class="main-faq-item-header">Для чего создан этот сайт?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
+                                    <div class="main-faq-item-text">
+                                        В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                    </div>
                                 </div>
                             </div>
-                            <div class="main-faq-item">
-                                <div class="main-faq-item-header">Кто может принять участие в конкурсном отборе?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
-                                <div class="main-faq-item-text">
-                                    В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+
+                            <div class="faq-group-subtitle">II. Вопросы по разделу «Заявление на участие в конкурсном отборе» (Форма 2 Конкурсной документации)</div>
+                            <div class="main-faq-list">
+                                <div class="main-faq-item">
+                                    <div class="main-faq-item-header">Для чего создан этот сайт?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
+                                    <div class="main-faq-item-text">
+                                        В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                    </div>
+                                </div>
+                                <div class="main-faq-item">
+                                    <div class="main-faq-item-header">Кто может принять участие в конкурсном отборе?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
+                                    <div class="main-faq-item-text">
+                                        В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                    </div>
+                                </div>
+                                <div class="main-faq-item">
+                                    <div class="main-faq-item-header">Что такое НЦМУ?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
+                                    <div class="main-faq-item-text">
+                                        В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                    </div>
+                                </div>
+                                <div class="main-faq-item">
+                                    <div class="main-faq-item-header">Для чего создан этот сайт?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
+                                    <div class="main-faq-item-text">
+                                        В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                    </div>
                                 </div>
                             </div>
-                            <div class="main-faq-item">
-                                <div class="main-faq-item-header">Что такое НЦМУ?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
-                                <div class="main-faq-item-text">
-                                    В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                        </div>
+                    </div>
+
+                    <div class="faq">
+                        <div class="faq-group-title" id="faq3">Вопросы по конкурсному отбору международных математических центров<svg><use xlink:href="images/sprite.svg#faq-group-title"></use></svg></div>
+                        <div class="faq-group-container">
+                            <div class="main-faq-list">
+                                <div class="main-faq-item">
+                                    <div class="main-faq-item-header">Для чего создан этот сайт?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
+                                    <div class="main-faq-item-text">
+                                        В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="main-faq-item">
-                                <div class="main-faq-item-header">Для чего создан этот сайт?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
-                                <div class="main-faq-item-text">
-                                    В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                <div class="main-faq-item">
+                                    <div class="main-faq-item-header">Кто может принять участие в конкурсном отборе?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
+                                    <div class="main-faq-item-text">
+                                        В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="main-faq-item">
-                                <div class="main-faq-item-header">Кто может принять участие в конкурсном отборе?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
-                                <div class="main-faq-item-text">
-                                    В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                <div class="main-faq-item">
+                                    <div class="main-faq-item-header">Что такое НЦМУ?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
+                                    <div class="main-faq-item-text">
+                                        В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="main-faq-item">
-                                <div class="main-faq-item-header">Что такое НЦМУ?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
-                                <div class="main-faq-item-text">
-                                    В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                <div class="main-faq-item">
+                                    <div class="main-faq-item-header">Для чего создан этот сайт?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
+                                    <div class="main-faq-item-text">
+                                        В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="main-faq-item">
-                                <div class="main-faq-item-header">Для чего создан этот сайт?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
-                                <div class="main-faq-item-text">
-                                    В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                <div class="main-faq-item">
+                                    <div class="main-faq-item-header">Кто может принять участие в конкурсном отборе?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
+                                    <div class="main-faq-item-text">
+                                        В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                    </div>
+                                </div>
+                                <div class="main-faq-item">
+                                    <div class="main-faq-item-header">Что такое НЦМУ?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
+                                    <div class="main-faq-item-text">
+                                        В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                    </div>
+                                </div>
+                                <div class="main-faq-item">
+                                    <div class="main-faq-item-header">Для чего создан этот сайт?<svg><use xlink:href="images/sprite.svg#main-faq-arrow"></use></svg></div>
+                                    <div class="main-faq-item-text">
+                                        В соответствии с указом Президента Российской Федерации от 7 мая 2018 г. №204 проводится конкурсный отбор научных или образовательных организаций высшего образования, на базе которых возможно создание НЦМУ
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -272,6 +281,8 @@
             </div>
         </footer>
 
+        <a href="#" class="up-link"><svg><use xlink:href="images/sprite.svg#up-link"></use></svg></a>
+
         <script>
             var pathTemplate = './';
         </script>
@@ -282,6 +293,13 @@
 
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="js/mcustomscrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="js/slick/slick.min.js"></script>
+        <script src="js/select2/select2.min.js"></script>
+        <script src="js/select2/ru.js"></script>
+        <script src="js/jquery.mask.min.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/air-datepicker/datepicker.min.js"></script>
         <script src="js/tools.js"></script>
 
     </body>
