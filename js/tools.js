@@ -7,54 +7,7 @@ $(document).ready(function() {
     });
 
     $('.main-map').each(function() {
-        $('.main-map-content').html('<svg viewBox="0 0 1107.77 630.12" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>');
-
-        var newMap = '';
-        var newHints = '';
-
-        for (var i = 0; i < opendataRegions.length; i++) {
-            var curRegion = opendataRegions[i];
-            newMap += '<g>' + curRegion.svg + '</g>';
-        }
-
-        for (var i = 0; i < mainRegionsData.length; i++) {
-            var curCity = mainRegionsData[i];
-            var curURL = ' data-url="' +  + '"';
-            newHints += '<a href="' + curCity.link + '" class="window-link main-map-item" style="left:' + (curCity.coords[0] / 1108 * 100) + '%; top:' + (curCity.coords[1] / 630 * 100) + '%">' +
-                            '<div class="main-map-item-icon"></div>' +
-                            '<div class="main-map-item-window">' +
-                                '<div class="main-map-item-window-title">' + curCity.title + '</div>' +
-                                '<div class="main-map-item-window-info">' +
-                                    '<div class="main-map-item-window-info-item">' +
-                                        '<div class="main-map-item-window-info-item-inner">' +
-                                            '<div class="main-map-item-window-info-icon"><img src="' + pathTemplate + 'images/main-about-types-1.svg" alt="" width="22" height="22" /></div>' +
-                                            '<div class="main-map-item-window-info-text">' + curCity.math + '</div>' +
-                                        '</div>' +
-                                    '</div>' +
-                                    '<div class="main-map-item-window-info-item">' +
-                                        '<div class="main-map-item-window-info-item-inner">' +
-                                            '<div class="main-map-item-window-info-icon"><img src="' + pathTemplate + 'images/main-about-types-2.svg" alt="" width="21" height="20" /></div>' +
-                                            '<div class="main-map-item-window-info-text">' + curCity.genom + '</div>' +
-                                        '</div>' +
-                                    '</div>' +
-                                    '<div class="main-map-item-window-info-item">' +
-                                        '<div class="main-map-item-window-info-item-inner">' +
-                                            '<div class="main-map-item-window-info-icon"><img src="' + pathTemplate + 'images/main-about-types-3.svg" alt="" width="19" height="22" /></div>' +
-                                            '<div class="main-map-item-window-info-text">' + curCity.ntr + '</div>' +
-                                        '</div>' +
-                                    '</div>' +
-                                    '<div class="main-map-item-window-info-item">' +
-                                        '<div class="main-map-item-window-info-item-inner">' +
-                                            '<div class="main-map-item-window-info-icon"><img src="' + pathTemplate + 'images/main-about-types-4.svg" alt="" width="24" height="24" /></div>' +
-                                            '<div class="main-map-item-window-info-text">' + curCity.nomc + '</div>' +
-                                        '</div>' +
-                                    '</div>' +
-                                '</div>' +
-                            '</div>' +
-                        '</a>';
-        }
-        $('.main-map-content svg').html(newMap);
-        $('.main-map-content').append(newHints);
+        drawMainMap();
     });
 
     $('body').on('mouseenter', '.main-map-item', function() {
@@ -107,6 +60,8 @@ $(document).ready(function() {
     $('.mobile-menu-link').click(function(e) {
         if ($('html').hasClass('mobile-menu-open')) {
             $('html').removeClass('mobile-menu-open');
+            $('html').removeClass('search-window-open');
+            $('html').removeClass('header-cabinet-open');
             $('meta[name="viewport"]').attr('content', 'width=device-width');
             $('.wrapper').css('margin-top', 0);
             $(window).scrollTop($('html').data('scrollTop'));
@@ -352,7 +307,180 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $('.header-search-link').click(function(e) {
+        $('html').addClass('search-window-open');
+        $('.search-window-form-input input').trigger('focus');
+        e.preventDefault();
+    });
+
+    $('.search-window-close').click(function(e) {
+        $('html').removeClass('search-window-open');
+        e.preventDefault();
+    });
+
+    $('body').on('click', '.search-window-bg', function(e) {
+        $('html').removeClass('search-window-open');
+    });
+
+    $('body').on('keyup', function(e) {
+        if (e.keyCode == 27) {
+            $('html').removeClass('search-window-open');
+        }
+    });
+
+    $('.search-window-form-back a').click(function(e) {
+        $('html').removeClass('search-window-open');
+        e.preventDefault();
+    });
+
+    $('.header-cabinet-link').click(function(e) {
+        if ($(window).width() < 1200 && $('.header-cabinet-menu').length > 0) {
+            $('html').addClass('header-cabinet-open');
+            e.preventDefault();
+        }
+    });
+
+    $('.header-cabinet-back a').click(function(e) {
+        $('html').removeClass('header-cabinet-open');
+        e.preventDefault();
+    });
+
+    $('.nav ul li').each(function() {
+        if ($(this).find('ul').length > 0) {
+            $(this).addClass('with-submenu');
+            $(this).find('ul').prepend('<li class="nav-back-link"><a href="#">' + $(this).find('> a').html() + '</a></li>');
+        }
+    });
+
+    $('.nav ul li a').click(function(e) {
+        if ($(window).width() < 1200) {
+            var curLI = $(this).parent();
+            if (curLI.find('ul').length > 0) {
+                curLI.toggleClass('open');
+                e.preventDefault();
+            }
+        }
+    });
+
+    $('body').on('click', '.nav ul li ul li.nav-back-link a', function(e) {
+        $(this).parent().parent().parent().removeClass('open');
+        e.preventDefault();
+    });
+
+    $('.header-mobile-menu').html($('.top-menu').html());
+
+    $('.main-map-filter-link').click(function(e) {
+        $('html').toggleClass('main-map-filter-open');
+        e.preventDefault();
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).parents().filter('.main-map-filter').length == 0) {
+            $('html').removeClass('main-map-filter-open');
+        }
+    });
+
+    $('.main-map-filter-window input').change(function() {
+        updateMainMapFilter();
+    });
+
+    $('body').on('click', '.main-map-filter-params-item a', function(e) {
+        var curValue = $(this).parent().attr('data-value');
+        $('.main-map-filter-window input[value="' + curValue + '"]').prop('checked', false);
+        updateMainMapFilter();
+        e.preventDefault();
+    });
+
 });
+
+function drawMainMap() {
+    $('.main-map-content').html('<svg viewBox="0 0 1107.77 630.12" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>');
+
+    var newMap = '';
+    var newHints = '';
+
+    for (var i = 0; i < opendataRegions.length; i++) {
+        var curRegion = opendataRegions[i];
+        newMap += '<g>' + curRegion.svg + '</g>';
+    }
+
+    for (var i = 0; i < mainRegionsData.length; i++) {
+        var curCity = mainRegionsData[i];
+        var curURL = ' data-url="' +  + '"';
+
+        var isFilter = false;
+        if ($('.main-map-filter-window input:checked').length == 0) {
+            isFilter = true;
+        } else {
+            if ($('.main-map-filter-window input[value="math"]').prop('checked') && curCity.math > 0) {
+                isFilter = true;
+            }
+            if ($('.main-map-filter-window input[value="genom"]').prop('checked') && curCity.genom > 0) {
+                isFilter = true;
+            }
+            if ($('.main-map-filter-window input[value="ntr"]').prop('checked') && curCity.ntr > 0) {
+                isFilter = true;
+            }
+            if ($('.main-map-filter-window input[value="nomc"]').prop('checked') && curCity.nomc > 0) {
+                isFilter = true;
+            }
+        }
+
+        if (isFilter) {
+            newHints += '<a href="' + curCity.link + '" class="window-link main-map-item" style="left:' + (curCity.coords[0] / 1108 * 100) + '%; top:' + (curCity.coords[1] / 630 * 100) + '%">' +
+                            '<div class="main-map-item-icon"></div>' +
+                            '<div class="main-map-item-window">' +
+                                '<div class="main-map-item-window-title">' + curCity.title + '</div>' +
+                                '<div class="main-map-item-window-info">';
+
+            newHints +=             '<div class="main-map-item-window-info-item">' +
+                                        '<div class="main-map-item-window-info-item-inner">' +
+                                            '<div class="main-map-item-window-info-icon"><img src="' + pathTemplate + 'images/main-about-types-1.svg" alt="" width="22" height="22" /></div>' +
+                                            '<div class="main-map-item-window-info-text">' + curCity.math + '</div>' +
+                                        '</div>' +
+                                    '</div>';
+
+            newHints +=             '<div class="main-map-item-window-info-item">' +
+                                        '<div class="main-map-item-window-info-item-inner">' +
+                                            '<div class="main-map-item-window-info-icon"><img src="' + pathTemplate + 'images/main-about-types-2.svg" alt="" width="21" height="20" /></div>' +
+                                            '<div class="main-map-item-window-info-text">' + curCity.genom + '</div>' +
+                                        '</div>' +
+                                    '</div>';
+
+            newHints +=             '<div class="main-map-item-window-info-item">' +
+                                        '<div class="main-map-item-window-info-item-inner">' +
+                                            '<div class="main-map-item-window-info-icon"><img src="' + pathTemplate + 'images/main-about-types-3.svg" alt="" width="19" height="22" /></div>' +
+                                            '<div class="main-map-item-window-info-text">' + curCity.ntr + '</div>' +
+                                        '</div>' +
+                                    '</div>';
+
+            newHints +=             '<div class="main-map-item-window-info-item">' +
+                                        '<div class="main-map-item-window-info-item-inner">' +
+                                            '<div class="main-map-item-window-info-icon"><img src="' + pathTemplate + 'images/main-about-types-4.svg" alt="" width="24" height="24" /></div>' +
+                                            '<div class="main-map-item-window-info-text">' + curCity.nomc + '</div>' +
+                                        '</div>' +
+                                    '</div>';
+
+            newHints +=         '</div>' +
+                            '</div>' +
+                        '</a>';
+        }
+    }
+    $('.main-map-content svg').html(newMap);
+    $('.main-map-content').append(newHints);
+}
+
+function updateMainMapFilter() {
+    var newHTML = '';
+
+    $('.main-map-filter-window input:checked').each(function() {
+        newHTML += '<div class="main-map-filter-params-item" data-value="' + $(this).attr('value') + '">' + $(this).parent().find('span').html() + '<a href="#"></a></div>';
+    });
+
+    $('.main-map-filter-params-inner').html(newHTML);
+
+    drawMainMap();
+}
 
 function windowOpen(linkWindow, dataWindow) {
     if ($('.window').length == 0) {
@@ -622,6 +750,12 @@ $(window).on('load resize scroll', function() {
         } else {
             $('.up-link').css({'margin-bottom': 0});
         }
+    }
+
+    if (windowScroll > 218) {
+        $('html').addClass('header-fixed');
+    } else {
+        $('html').removeClass('header-fixed');
     }
 });
 

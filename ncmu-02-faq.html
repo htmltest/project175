@@ -19,49 +19,87 @@
         <div class="wrapper">
             <div class="wrapper-inner">
 
-                <div class="top">
-                    <div class="container">
-                        <div class="top-menu">
+                <div class="header-wrapper">
+                    <div class="top">
+                        <div class="container">
+                            <div class="top-menu">
+                                <ul>
+                                    <li><a href="#">Новости</a></li>
+                                    <li class="active"><a href="#">Вопрос-ответ</a></li>
+                                    <li><a href="#">Вакансии</a></li>
+                                    <li><a href="#">Контакты</a></li>
+                                </ul>
+                            </div>
+                            <div class="top-lang">
+                                <span>Ру</span> | <a href="#">En</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <header>
+                        <div class="container">
+                            <div class="logo"><a href="#"><img src="images/logo.png" alt="" /></a></div>
+
+                            <div class="header-cabinet">
+                                <a href="#" class="header-cabinet-link"><svg><use xlink:href="images/sprite.svg#header-cabinet"></use></svg>Личный кабинет</a>
+                            </div>
+
+                            <div class="header-search">
+                                <a href="#" class="header-search-link"><svg><use xlink:href="images/sprite.svg#header-search"></use></svg></a>
+                            </div>
+
+                            <a href="#" class="mobile-menu-link"><span></span></a>
+                        </div>
+                    </header>
+
+                    <div class="nav">
+                        <div class="container">
                             <ul>
-                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Об НЦМУ</a></li>
+                                <li>
+                                    <a href="#">Центры<svg><use xlink:href="images/sprite.svg#nav-arrow"></use></svg></a>
+                                    <ul>
+                                        <li><a href="#">Математические НЦМУ</a></li>
+                                        <li><a href="#">НЦМУ по приоритетам</a></li>
+                                        <li><a href="#">Геномные НЦМУ</a></li>
+                                        <li><a href="#">НОМЦ</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Результаты деятельности</a></li>
+                                <li><a href="#">Советы</a></li>
                                 <li class="active"><a href="#">Вопрос-ответ</a></li>
-                                <li><a href="#">Вакансии</a></li>
                                 <li><a href="#">Контакты</a></li>
                             </ul>
                         </div>
-                        <div class="top-lang">
-                            Ру | <a href="#">En</a>
+                    </div>
+
+                    <div class="header-mobile">
+                        <div class="header-mobile-menu"></div>
+                        <div class="container">
+                            <div class="header-mobile-feedback"><a href="#" class="btn"><svg><use xlink:href="images/sprite.svg#header-mobile-feedback"></use></svg>Обратная связь</a></div>
+                            <div class="header-mobile-footer">
+                                <div class="header-mobile-footer-container">
+                                    <div class="header-mobile-footer-title">Портал разработан при поддержке <a href="#">Минобрнауки России</a></div>
+                                    <div class="header-mobile-footer-phone"><a href="tel:+74959168108">+7 (495) 916–81–08</a></div>
+                                </div>
+                                <div class="header-mobile-footer-logo"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <header>
-                    <div class="container">
-                        <div class="logo"><a href="#"><img src="images/logo.png" alt="" /></a></div>
-
-                        <div class="header-cabinet">
-                            <a href="#" class="header-cabinet-link"><svg><use xlink:href="images/sprite.svg#header-cabinet"></use></svg>Личный кабинет</a>
+                <div class="search-window">
+                    <div class="search-window-bg"></div>
+                    <div class="search-window-form">
+                        <div class="container">
+                            <div class="search-window-form-back"><a href="#">Поиск</a></div>
+                            <form action="#" method="post">
+                                <div class="search-window-form-input"><input type="text" name="search" value="" class="required" placeholder="Поиск" /><svg><use xlink:href="images/sprite.svg#header-search"></use></svg></div>
+                                <div class="search-window-form-submit"><input type="submit" value="Найти" class="btn" /></div>
+                            </form>
                         </div>
-
-                        <div class="header-search">
-                            <a href="#" class="header-search-link"><svg><use xlink:href="images/sprite.svg#header-search"></use></svg></a>
-                        </div>
-
-                        <a href="#" class="mobile-menu-link"><span></span></a>
                     </div>
-                </header>
-
-                <div class="nav">
-                    <div class="container">
-                        <ul>
-                            <li><a href="#">Об НЦМУ</a></li>
-                            <li><a href="#">Центры</a></li>
-                            <li><a href="#">Результаты деятельности</a></li>
-                            <li><a href="#">Советы</a></li>
-                            <li class="active"><a href="#">Вопрос-ответ</a></li>
-                            <li><a href="#">Контакты</a></li>
-                        </ul>
-                    </div>
+                    <div class="search-window-close"><svg><use xlink:href="images/sprite.svg#search-window-close"></use></svg></div>
                 </div>
 
                 <!-- container -->
