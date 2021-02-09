@@ -770,16 +770,17 @@ header {background:#1c48a3; height:100px}
 .main-faq {margin:90px 0 0 0; max-width:963px}
 .main-faq-list {border-top:1px solid #e5e5e5; margin:30px 0 0 0}
 .main-faq-item {border-bottom:1px solid #e5e5e5}
-.main-faq-item-header {position:relative; padding:16px 45px 13px 30px; cursor:pointer; font-weight:500; font-size:17px; line-height:26px; color:#333; transition:color 0.2s}
-.main-faq-item-header:hover {color:#666}
-.main-faq-item-header svg {display:block; width:15px; height:8px; position:absolute; right:0; top:24px; fill:none; stroke:#1c48a3}
+.main-faq-item-header {position:relative; padding:16px 55px 13px 40px; cursor:pointer; font-weight:500; margin:0 -10px; font-size:17px; line-height:26px; color:#333; transition:color 0.2s, background 0.2s}
+.main-faq-item-header:hover {color:#666; background:#f5fcff}
+.main-faq-item-header svg {display:block; width:15px; height:8px; position:absolute; right:10px; top:24px; fill:none; stroke:#1c48a3; transition:transform 0.2s}
 .main-faq-item.open .main-faq-item-header svg {transform:rotate(-180deg)}
 .main-faq-item-text {display:none; color:#000; padding:1px 45px 21px 30px}
 
 @media (max-width:1199px) {
     .main-faq {margin:70px 0 0 0}
     .main-faq-list {margin:32px 0 0 0}
-    .main-faq-item-header {font-size:20px; line-height:28px; font-weight:normal; padding:19px 45px 19px 0; color:#000}
+    .main-faq-item-header {font-size:20px; line-height:28px; font-weight:normal; padding:19px 45px 19px 0; margin:0; color:#000}
+    .main-faq-item-header:hover {background:none}
     .main-faq-item-text {padding:1px 0 31px 0; font-size:18px; line-height:27px}
 }
 
