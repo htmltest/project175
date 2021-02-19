@@ -391,6 +391,45 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    if ($('.faq').length > 0) {
+        if (window.location.hash != '') {
+            var curID = window.location.hash.replace('#', '');
+            $('.main-faq-item[data-id="' + curID + '"]').each(function() {
+                var curItem = $(this);
+                curItem.addClass('open');
+                curItem.find('.main-faq-item-text').show();
+                curItem.parents().filter('.faq').addClass('open');
+                if ($(window).width() > 1199) {
+                    $('html, body').animate({'scrollTop': curItem.offset().top - 60});
+                } else {
+                    $('html, body').animate({'scrollTop': curItem.offset().top - $('header').height()});
+                }
+            });
+        }
+    }
+
+    if ($('.new-tabs').length > 0) {
+        if (window.location.hash != '') {
+            var curID = window.location.hash.replace('#', '');
+            $('.new-tabs-content[data-id="' + curID + '"]').each(function() {
+                var curItem = $(this);
+                var curTabs = curItem.parents().filter('.new-tabs');
+                var curIndex = curTabs.find('.new-tabs-content').index(curItem);
+                curTabs.find('.new-tabs-menu-item a').eq(curIndex).trigger('click');
+            });
+
+            $('.centers-item[data-id="' + curID + '"]').each(function() {
+                var curItem = $(this);
+                var curTab = curItem.parents().filter('.new-tabs-content');
+                var curTabs = curTab.parents().filter('.new-tabs');
+                var curIndex = curTabs.find('.new-tabs-content').index(curTab);
+                curTabs.find('.new-tabs-menu-item a').eq(curIndex).trigger('click');
+                curTab.addClass('open');
+                $('html, body').animate({'scrollTop': curItem.offset().top - $('header').height()});
+            });
+        }
+    }
+
 });
 
 function drawMainMap() {
@@ -739,7 +778,7 @@ $(window).on('load resize scroll', function() {
     $('#body-test-height').remove();
 
     if ($('.up-link').length == 1) {
-        if (windowScroll > windowHeight) {
+        if (windowScroll > windowHeight / 2) {
             $('.up-link').addClass('visible');
         } else {
             $('.up-link').removeClass('visible');
