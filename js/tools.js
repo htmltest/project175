@@ -429,6 +429,19 @@ $(document).ready(function() {
             });
         }
     }
+    
+    $('.nav ul li ul li a').click(function(e) {
+        var curID = this.hash.replace('#', '');
+        if ($('.new-tabs-content[data-id="' + curID + '"]').length == 1) {
+            $('.new-tabs-content[data-id="' + curID + '"]').each(function() {
+                var curItem = $(this);
+                var curTabs = curItem.parents().filter('.new-tabs');
+                var curIndex = curTabs.find('.new-tabs-content').index(curItem);
+                curTabs.find('.new-tabs-menu-item a').eq(curIndex).trigger('click');
+            });
+            e.preventDefault();
+        }
+    });
 
 });
 
