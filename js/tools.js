@@ -277,7 +277,7 @@ $(document).ready(function() {
         var curTabsContainer = curTabs.find('> .new-tabs-container');
         var newHTML = '';
         curTabsContainer.find('> .new-tabs-content').each(function() {
-            var curTabTitle = $(this).find('> .new-tabs-content-title').html();
+            var curTabTitle = $(this).find('> .new-tabs-content-title').text();
             newHTML += '<div class="new-tabs-menu-item"><a href="#">' + curTabTitle + '</a></div> ';
         });
         curTabsContainer.find('> .new-tabs-content').eq(0).addClass('active');
@@ -429,7 +429,7 @@ $(document).ready(function() {
             });
         }
     }
-    
+
     $('.nav ul li ul li a').click(function(e) {
         var curID = this.hash.replace('#', '');
         if ($('.new-tabs-content[data-id="' + curID + '"]').length == 1) {
@@ -441,6 +441,38 @@ $(document).ready(function() {
             });
             e.preventDefault();
         }
+    });
+
+    $('body').on('click', '.form-select-with-colors-current', function() {
+        var curSelect = $(this).parent();
+        if (curSelect.hasClass('open')) {
+            curSelect.removeClass('open');
+        } else {
+            $('.form-select-with-colors.open').removeClass('open');
+            curSelect.addClass('open');
+        }
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).parents().filter('.form-select-with-colors').length == 0) {
+            $('.form-select-with-colors.open').removeClass('open');
+        }
+    });
+
+    $('body').on('change', '.form-select-with-colors-item input', function() {
+        var curInput = $(this);
+        var curSelect = curInput.parents().filter('.form-select-with-colors');
+        curSelect.find('.form-select-with-colors-current').removeClass('default');
+        curSelect.find('.form-select-with-colors-current').html(curInput.parent().find('span').html());
+        curSelect.removeClass('open');
+        $('.news-header-filter form').trigger('submit');
+    });
+
+    $('.form-select-with-colors-item input:checked').each(function() {
+        var curInput = $(this);
+        var curSelect = curInput.parents().filter('.form-select-with-colors');
+        curSelect.find('.form-select-with-colors-current').removeClass('default');
+        curSelect.find('.form-select-with-colors-current').html(curInput.parent().find('span').html());
     });
 
 });
