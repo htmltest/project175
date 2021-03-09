@@ -1346,8 +1346,8 @@ footer {height:241px; margin:-241px 0 0 0; background:#e2e2e2; padding:35px 0 0 
 }
 
 .new-tabs-container {position:relative}
-.new-tabs-content {position:absolute; left:-9999px; top:-9999px; width:100%; opacity:0; transition:opacity 0.75s ease, transform 0.75s ease; transform:translateY(20px)}
-.new-tabs-content.active {position:relative; left:auto; top:auto; opacity:1; transform:translateY(0)}
+.new-tabs-content {position:absolute; left:-9999px; top:-9999px; width:100%; opacity:0; transition:opacity 0.75s ease, margin-top 0.75s ease; margin-top:20px}
+.new-tabs-content.active {position:relative; left:auto; top:auto; opacity:1; margin-top:0}
 .new-tabs-content-title {display:none}
 .new-tabs-content-title img {display:none}
 
