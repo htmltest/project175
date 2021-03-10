@@ -294,6 +294,14 @@ $(document).ready(function() {
             var curIndex = curTabs.find('.new-tabs-menu-item').index(curLi);
             curTabs.find('.new-tabs-content.active').removeClass('active');
             curTabs.find('.new-tabs-content').eq(curIndex).addClass('active');
+
+            $('.nav ul li ul li.active').removeClass('active');
+            $('.nav ul li ul li a').each(function(e) {
+                var curID = this.hash.replace('#', '');
+                if ($('.new-tabs-content[data-id="' + curID + '"]').hasClass('active')) {
+                    $(this).parent().addClass('active');
+                }
+            });
         }
         e.preventDefault();
     });
