@@ -1237,7 +1237,8 @@ footer {height:241px; margin:-241px 0 0 0; background:#e2e2e2; padding:35px 0 0 
 .up-link:hover svg {fill:#fff}
 
 @media (max-width:1199px) {
-    .up-link {display:none}
+    .up-link {width:62px; height:62px}
+    .up-link svg {width:42px; height:42px; margin:-21px 0 0 -21px}
 }
 
 .on-mobile {display:none}
